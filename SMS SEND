@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayoutxmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+android:layout_height="match_parent"
+android:orientation="vertical"
+tools:context=".MainActivity">
+
+
+<EditText
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:hint="Enter phone no" />
+android:id="@+id/edit_mob"
+
+
+<EditText
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:id="@+id/edit_msg"
+android:hint="meassage" />
+
+
+<Button
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:id="@+id/bt_1"
+android:text="Click"/>
+
+</LinearLayout>
+
+
+JAVA code:
+package com.example.myapplication;
+import androidx.appcompat.app.AppCompatActivity;
+import android.content.Intent;
+import android.os.Bundle;
+import android.telephony.SmsManager;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.Toast;
+
+public class MainActivity extends AppCompatActivity {
+EditTexte_mob,e_msg;
+Button b1;
+String s1,s2;
+@Override
+protected void onCreate(Bundle savedInstanceState) {
+super.onCreate(savedInstanceState);
+setContentView(R.layout.activity_main);
+e_mob=findViewById(R.id.edit_mob);
+e_msg=findViewById(R.id.edit_msg);
+b1=findViewById(R.id.bt_1);
+b1.setOnClickListener(new View.OnClickListener() {
+public void onClick(View view) {
+@Override
+s1=e_mob.getText().toString();
+s2=e_msg.getText().toString();
+SmsManager s=SmsManager.getDefault();
+s.sendTextMessage(s1,null,s2,null,null);
+}
+});
+}
+}
