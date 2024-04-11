@@ -1,35 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayoutxmlns:android="http://schemas.android.com/apk/res/android"
-xmlns:app="http://schemas.android.com/apk/res-auto"
-xmlns:tools="http://schemas.android.com/tools"
-android:layout_width="match_parent"
-android:layout_height="match_parent"
-android:orientation="vertical"
-tools:context=".MainActivity">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
 
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Enter phone no"
+        android:id="@+id/edit_mob"/> <!-- Moved id attribute to the correct position -->
 
-<EditText
-android:layout_width="match_parent"
-android:layout_height="wrap_content"
-android:hint="Enter phone no" />
-android:id="@+id/edit_mob"
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/edit_msg"
+        android:hint="message" />
 
-
-<EditText
-android:layout_width="match_parent"
-android:layout_height="wrap_content"
-android:id="@+id/edit_msg"
-android:hint="meassage" />
-
-
-<Button
-android:layout_width="match_parent"
-android:layout_height="wrap_content"
-android:id="@+id/bt_1"
-android:text="Click"/>
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/bt_1"
+        android:text="Click"/>
 
 </LinearLayout>
-
 
 JAVA code:
 package com.example.myapplication;
