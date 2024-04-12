@@ -11,7 +11,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:hint="Enter phone no"
-        android:id="@+id/edit_mob"/> <!-- Moved id attribute to the correct position -->
+        android:id="@+id/edit_mob"/> 
 
     <EditText
         android:layout_width="match_parent"
